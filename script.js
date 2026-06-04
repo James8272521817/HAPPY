@@ -100,19 +100,12 @@ musicBtn.addEventListener('click', ()=>{
   }
 });
 
-// Email button — open mail client with encoded subject/body
-const emailBtn = document.getElementById('emailBtn');
 const copyBtn = document.getElementById('copyBtn');
 const downloadBtn = document.getElementById('downloadBtn');
 
 function getMessage(){ return document.getElementById('message').innerText.trim(); }
 
-emailBtn.addEventListener('click', ()=>{
-  const subject = 'Happy 17th Birthday ❤️';
-  const body = getMessage();
-  const mailto = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  location.href = mailto;
-});
+
 
 copyBtn.addEventListener('click', async ()=>{
   try{ await navigator.clipboard.writeText(getMessage()); copyBtn.textContent='Copied ✔'; setTimeout(()=>copyBtn.textContent='Copy Message',1600);}catch(e){alert('Copy failed — select and copy manually');}
@@ -126,3 +119,23 @@ downloadBtn.addEventListener('click', ()=>{
 });
 
 function escapeHtml(s){ return s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;'); }
+
+// Autoplay attempt: try to start music and confetti when page opens.
+function initAutoplay(){
+  try{ if(!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)(); }catch(e){/* ignore */}
+  musicPlaying = true;
+  playHappyBirthday(true);
+  spawn(160);
+  // If audio is suspended by browser, wait for user gesture to resume
+  if(audioCtx && audioCtx.state === 'suspended'){
+    const resume = ()=>{
+      audioCtx.resume().then(()=>{ if(musicPlaying){ stopMusic(); playHappyBirthday(true); } });
+      window.removeEventListener('click', resume);
+      window.removeEventListener('touchstart', resume);
+    };
+    window.addEventListener('click', resume);
+    window.addEventListener('touchstart', resume);
+  }
+}
+
+window.addEventListener('load', ()=>{ initAutoplay(); });
