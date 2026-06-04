@@ -1,38 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Happy 17th Birthday!</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Love ❤️</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="stage">
-    <header>
-      <h1>Happy 17th Birthday!</h1>
-      <p class="sub">A little surprise for my love 💖</p>
-    </header>
 
-    <main class="card" id="dropArea">
-      <div class="message" id="message">
-HI BEBYY HAPPYY HAPPYY BIRTHDAYY MY LOVEYY DOVEYYY JILLLYY SAVIIEEEE BEBYYYKOOOO, UHMMM SANA POI MATUPAD MO LAHAT NG PANGARAP MO AT PANGARAP NTIN AT WISH KO PO NA MAS MAGING HEALTHY KA PA PO LIKE MORE CHUBBYY CUTIEE HEHEHE AND I LOVE YOU VERYY VERYY MUCCHHH , IMISS YOUUU MYLOVEEE MWMAMWMAMWMAMWAMMWMMW
-      </div>
+<div id="hearts"></div>
 
-      <div class="controls">
-        <button id="confettiBtn">Celebrate 🎉</button>
-        <button id="musicBtn">Play Music 🎵</button>
-        <button id="copyBtn">Copy Message</button>
-        <button id="downloadBtn">Download Page</button>
-      </div>
-    </main>
+<div class="container">
 
-    <footer>
-      <small>Open this page in a browser and click "Celebrate" for confetti.</small>
-    </footer>
-  </div>
+    <div id="envelope-section">
+        <h1>💌 A Letter For You 💌</h1>
+        <p>Click the envelope, my love ❤️</p>
 
-  <canvas id="confetti-canvas"></canvas>
+        <div class="envelope" onclick="openLetter()">
+            ✉️
+        </div>
+    </div>
 
-  <script src="script.js"></script>
+    <div id="letter-section" class="hidden">
+        <div class="letter">
+
+            <h1>🎂 Happy Birthday 🎂</h1>
+
+            <p id="typed-text"></p>
+
+        </div>
+
+        <div class="music-section">
+            <h2>🎵 A Song For You My Love 🎵</h2>
+
+            <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/BzWo-VxJU5I"
+                title="YouTube video player"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
