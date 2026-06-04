@@ -1,47 +1,40 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Jaely 💖</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Jaely Sabriel Dominguez 💌</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Floating hearts and sparkles -->
+    <div id="particles"></div>
 
-<div class="hearts"></div>
+    <!-- Landing Page -->
+    <div class="landing-page">
+        <h1>💌 A Letter For Jaely Sabriel Dominguez 💌</h1>
+        <p class="subtitle">Click the envelope</p>
+        <div class="envelope" id="envelope">
+            <div class="envelope-top"></div>
+            <div class="envelope-bottom"></div>
+        </div>
+    </div>
 
-<div class="container">
+    <!-- Letter Section -->
+    <div class="letter-section" id="letter-section">
+        <div class="letter">
+            <p id="letter-text"></p>
+        </div>
+        <div class="music-section">
+            <h2>🎵 Song For You, My Love 🎵</h2>
+            <iframe width="100%" height="200" src="https://www.youtube.com/embed/BzWo-VxJU5I?autoplay=0&rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
 
-<h1 class="title">💌 A Letter For Jaely 💌</h1>
+    <!-- Confetti container -->
+    <canvas id="confetti"></canvas>
 
-<div class="envelope" onclick="openLetter()">
-<div class="flap"></div>
-<div class="body"></div>
-</div>
-
-<div id="letter" class="letter hidden">
-<h2>Happy Birthday 🎂💕</h2>
-
-<p id="typedText"></p>
-</div>
-
-<div class="music-section">
-<h2>🎵 Song For You, My Love 🎵</h2>
-
-<iframe
-width="320"
-height="180"
-src="https://www.youtube.com/embed/BzWo-VxJU5I"
-title="YouTube video player"
-allowfullscreen>
-</iframe>
-
-</div>
-
-</div>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
