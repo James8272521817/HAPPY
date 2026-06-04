@@ -1,0 +1,27 @@
+:root{
+  --bg1:#ff9a9e;
+  --bg2:#fad0c4;
+  --card:#fffef9;
+  --accent:#ff6b81;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+body{background:linear-gradient(135deg,var(--bg1),var(--bg2));display:flex;align-items:center;justify-content:center;padding:24px}
+.stage{width:100%;max-width:900px}
+header{text-align:center;color:#5a2230}
+header h1{font-size:2.4rem;margin:0}
+.sub{opacity:0.9;margin-top:6px}
+.card{background:var(--card);border-radius:20px;padding:24px;margin-top:18px;box-shadow:0 10px 30px rgba(0,0,0,0.12)}
+.message{white-space:pre-wrap;font-size:1.05rem;line-height:1.45;color:#40242b;padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.5),transparent);}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+button{background:linear-gradient(180deg,var(--accent),#ff4b6b);border:none;color:white;padding:10px 14px;border-radius:10px;cursor:pointer;font-weight:600}
+button#copyBtn{background:linear-gradient(180deg,#6bd3ff,#4aa6ff)}
+button#downloadBtn{background:linear-gradient(180deg,#7efab4,#00d67a)}
+button#musicBtn{background:linear-gradient(180deg,#ffd166,#ffb347);color:#3a1b22}
+footer{text-align:center;color:#3a2430;margin-top:12px;opacity:0.9}
+#confetti-canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none}
+
+@media(min-width:800px){
+  .message{font-size:1.25rem}
+  header h1{font-size:3rem}
+}

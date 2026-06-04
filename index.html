@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy 17th Birthday!</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="stage">
+    <header>
+      <h1>Happy 17th Birthday!</h1>
+      <p class="sub">A little surprise for my love 💖</p>
+    </header>
+
+    <main class="card" id="dropArea">
+      <div class="message" id="message">
+HI BEBYY HAPPYY HAPPYY BIRTHDAYY MY LOVEYY DOVEYYY JILLLYY SAVIIEEEE BEBYYYKOOOO, UHMMM SANA POI MATUPAD MO LAHAT NG PANGARAP MO AT PANGARAP NTIN AT WISH KO PO NA MAS MAGING HEALTHY KA PA PO LIKE MORE CHUBBYY CUTIEE HEHEHE AND I LOVE YOU VERYY VERYY MUCCHHH , IMISS YOUUU MYLOVEEE MWMAMWMAMWMAMWAMMWMMW
+      </div>
+
+      <div class="gallery" id="gallery" aria-live="polite"></div>
+
+      <div class="controls">
+        <button id="confettiBtn">Celebrate 🎉</button>
+        <button id="musicBtn">Play Music 🎵</button>
+        <button id="addPhotoBtn">Add Photo 📸</button>
+        <input id="fileInput" type="file" accept="image/*" multiple style="display:none">
+        <button id="emailBtn">Send as Email ✉️</button>
+        <button id="copyBtn">Copy Message</button>
+        <button id="downloadBtn">Download Page</button>
+      </div>
+      <p class="hint">Drag & drop photos onto the card to add them.</p>
+    </main>
+
+    <footer>
+      <small>Open this page in a browser and click "Celebrate" for confetti.</small>
+    </footer>
+  </div>
+
+  <canvas id="confetti-canvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
